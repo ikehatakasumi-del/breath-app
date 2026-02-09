@@ -25,7 +25,9 @@ export default function Achievements () {
                 <li>11月：{}</li>
                 <li>12月：{}</li>
             </ul>
-            {/* <Image src=""/> */}
+            <Image src="/Image/睡蓮.png" alt="睡蓮の花"
+            width={200} height={300}
+            />
         </div>
     )
 };
