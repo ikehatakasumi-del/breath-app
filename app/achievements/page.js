@@ -1,4 +1,4 @@
-export default function Acievements () {
+export default function Achievements () {
     return (
         <div>
             <h1>120日達成</h1>
@@ -18,4 +18,4 @@ export default function Acievements () {
             </ul>
         </div>
     )
-}
+};

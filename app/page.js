@@ -19,7 +19,7 @@ export default function Home() {
         priority/>
       </div>
       <div className="font-medium text-white flex flex-col gap-9 items-center">
-        <Link href="/acievements"
+        <Link href="/achievements"
         className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
           GET STARTED
@@ -27,7 +27,7 @@ export default function Home() {
         {/* Linkタグは別の場所に連れて行ってくれるドア　
         Buttonは何かを実行するスイッチ（送信や保存など）
         Buttonの中にLinkを書くとパソコンが混乱する → Linkを使いCSSで見た目をボタンぽくする*/}
-        <Link href="/acievements"
+        <Link href="./achievements"
         className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
           MY PROGRESS
