@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -18,16 +19,19 @@ export default function Home() {
         priority/>
       </div>
       <div className="font-medium text-white flex flex-col gap-9 items-center">
-        <button
-        className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider"
+        <Link href="/acievements"
+        className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
           GET STARTED
-        </button>
-        <button
-        className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider"
+        </Link>
+        {/* Linkタグは別の場所に連れて行ってくれるドア　
+        Buttonは何かを実行するスイッチ（送信や保存など）
+        Buttonの中にLinkを書くとパソコンが混乱する → Linkを使いCSSで見た目をボタンぽくする*/}
+        <Link href="/acievements"
+        className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
           MY PROGRESS
-        </button>
+        </Link>
       </div>
     </div>
   );

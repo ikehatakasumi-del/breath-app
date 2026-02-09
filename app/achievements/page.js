@@ -1,7 +1,7 @@
 export default function Acievements () {
     return (
         <div>
-            <h1>120日継続達成</h1>
+            <h1>120日達成</h1>
             <ul>
                 <li>1月：</li>
                 <li>2月：</li>
