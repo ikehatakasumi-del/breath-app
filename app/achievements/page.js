@@ -1,3 +1,4 @@
+
 import Link from "next/link"
 import Image from "next/image"
 export default function Achievements () {
@@ -27,6 +28,8 @@ export default function Achievements () {
             </ul>
             <Image src="/Image/睡蓮.png" alt="睡蓮の花"
             width={200} height={300}
+            style={{width:"auto",height:"auto"}}
+            priority
             />
         </div>
     )

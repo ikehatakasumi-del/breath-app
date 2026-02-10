@@ -1,10 +1,15 @@
+"use client";
 import Image from "next/image"
+import {motion} from "motion/react"
 export default function Message () {
     return (
-        <div className="text-center">
-            <p>お疲れ様でした</p>
-            <p>APIから取得したメッセージ</p>
-            <Image src="/Image/睡蓮.png" alt="睡蓮の花" width={200} height={300}/>
-        </div>
+        <motion.div initial={{opacity:0,y:50}} animate={{opacity:1,y:0}} transition={{duration:1.0,ease:"easeOut"}} className="text-center">
+            <p className="mt-80 text-3xl">お疲れ様でした</p>
+            <p className="mt-12 text-3xl">
+                APIから取得したメッセージ
+            </p>
+            <Image src="/Image/睡蓮.png" alt="睡蓮の花" style={{width:"auto",height:"auto"}} width={200} height={300} priority/>
+        </motion.div>
     )
 };
+

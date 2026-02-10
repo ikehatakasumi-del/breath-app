@@ -1,3 +1,5 @@
+"use client";
+import {motion, AnimatePresence} from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -15,14 +17,16 @@ export default function Home() {
         alt="瞑想する女性"
         width={1200} height={800}
         sizes="(max-width:768px)100vw, 900px"
-        className="w-full max-w-2xl h-auto mb-7"
+        className="w-auto max-w-2xl h-auto mb-7"
         priority/>
       </div>
       <div className="font-medium text-white flex flex-col gap-9 items-center">
         <Link href="/meditate"
         className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
-          GET STARTED
+          <motion.span whileHover={{ scale: 1.1 }} style={{display:"inline-block"}}>
+            GET STARTED
+          </motion.span>
         </Link>
         {/* Linkタグは別の場所に連れて行ってくれるドア　
         Buttonは何かを実行するスイッチ（送信や保存など）
@@ -30,7 +34,9 @@ export default function Home() {
         <Link href="./achievements"
         className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
-          MY PROGRESS
+          <motion.span whileHover={{ scale: 1.1}} style={{display:"inline-block"}}>
+            MY PROGRESS
+          </motion.span>
         </Link>
       </div>
     </div>
