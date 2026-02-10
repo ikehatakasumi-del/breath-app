@@ -19,7 +19,7 @@ export default function Home() {
         priority/>
       </div>
       <div className="font-medium text-white flex flex-col gap-9 items-center">
-        <Link href="/achievements"
+        <Link href="/meditate"
         className="bg-blue-600 p-4 rounded-4xl w-2xs tracking-wider cursor-pointer focus:ring-5 focus:ring-blue-300"
         >
           GET STARTED
