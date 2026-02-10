@@ -1,7 +1,11 @@
 import Achievements from "./page";
+// import Keisan from "./keisan";
 
 export default function AchievementsLayout(){
     return(
-        <Achievements/>
+        <div>
+            <Achievements/>
+            {/* <Keisan/> */}
+        </div>
     )
 };
