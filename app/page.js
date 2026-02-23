@@ -199,25 +199,21 @@ export default function BreathApp() {
   // ----------
 
   function finishSession() {
-    // 今日の日付（例：2024-01-15）
-    const today = new Date().toISOString().split("T")[0];
+  const today = new Date().toISOString().split("T")[0]; // "2026-02-23"
 
-    // 記録を更新
-    setRecords((prev) => {
-      const updated = { ...prev };
-      const dateKey = today; // "YYYY-MM-DD" をそのままキーにする
-      // monthlyは "YYYY-MM" のキーで管理するが、
-      // ここでは日付ごとにカウントする（stats側で月集計）
-      updated[dateKey] = (updated[dateKey] || 0) + 1;
-      localStorage.setItem("records", JSON.stringify(updated));
-      return updated;
-    });
+  const monthKey = today.substring(0, 7); // "2026-02"
 
-    stop();
-    setPage("completion");
-    fetchAdvice();
-  }
+  setRecords((prev) => {
+    const updated = { ...prev };
+    updated[monthKey] = (updated[monthKey] || 0) + 1;
+    localStorage.setItem("records", JSON.stringify(updated));
+    return updated;
+  });
 
+  stop();
+  setPage("completion");
+  fetchAdvice();
+}
   // ----------
   // アドバイスをAPIから取得
   // ----------
@@ -469,7 +465,7 @@ function CompletionPage({ advice, onBack }) {
       <BackButton onClick={onBack} />
 
       <div className="flex-1 flex flex-col items-center justify-center text-center gap-8">
-        <h1 className="text-3xl font-black text-stone-800">お疲れ様でした</h1>
+        <h1 className="text-2xl font-black text-stone-800">お疲れ様でした</h1>
 
         <div>
           <p className="text-xs text-stone-400 mb-3 tracking-widest uppercase">Today's Message</p>
