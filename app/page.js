@@ -1,6 +1,6 @@
 "use client";
 // ⬆️ Next.js App Router では、useStateなどのReactフックを使うファイルに
-//    必ず "use client" を書く必要があります
+//    必ず "use client" を書く必要がある
 
 // ========================================
 // 必要な機能（フック）をReactからインポートする
@@ -16,7 +16,10 @@ import Image from "next/image";
 // ========================================
 
 // 選択できる瞑想時間の一覧
+// 画面の表示する「3分」「10分」「15分」という選択肢のデータを一箇所にまとめて管理するための名簿
+//label:そのデータがなにを表すか、人間に分かりやすくするためのラベル（名札）、p:文章を入れる入れ物
 const TIME_OPTIONS = [
+  // { label: "1分",  minutes: 1  },
   { label: "3分",  minutes: 3  },
   { label: "10分", minutes: 10 },
   { label: "15分", minutes: 15 },
@@ -71,6 +74,7 @@ export default function BreathApp() {
   // ----------
 
   // setInterval のIDを保存しておく（後でclearIntervalするため）
+  // これは動きしたタイマーを、後から確実に止めるためのリモコンを保管しておく場所
   const timerRef    = useRef(null);
   const breathRef   = useRef(null);
 
@@ -296,7 +300,7 @@ export default function BreathApp() {
 // ========================================
 // 子コンポーネント群
 // 各ページを別のコンポーネントとして分けることで
-// コードが読みやすくなります
+// コードが読みやすくなる
 // ========================================
 
 // ----------
