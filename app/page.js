@@ -321,12 +321,12 @@ function MainPage({ welcomeMessage, onStart, onStats }) {
 
       <div className="flex-1 flex flex-col items-center justify-center gap-8">
         {/* タイトル */}
-        <h1 className="text-7xl font-black tracking-tight text-stone-800">
+        <h1 className="m-5 text-6xl tracking-wide font-black text-stone-800">
           Breath
         </h1>
 
         {/* ウェルカムメッセージ */}
-        <p className="text-center text-stone-500 text-sm leading-relaxed max-w-xs">
+        <p className="text-center text-stone-800 text-sm leading-relaxed max-w-xs">
           {welcomeMessage}
         </p>
 
@@ -337,7 +337,7 @@ function MainPage({ welcomeMessage, onStart, onStats }) {
       {/* スタートボタン */}
       <button
         onClick={onStart}
-        className="w-full bg-stone-800 text-white py-4 rounded-2xl text-base font-bold tracking-widest hover:bg-stone-700 transition-colors"
+        className="w-full bg-blue-500 text-white py-4 rounded-2xl text-base font-bold tracking-widest hover:bg-blue-700 transition-colors"
       >
         GET STARTED
       </button>
@@ -372,13 +372,13 @@ function MeditationPage({
       <div className="mb-10 flex items-center justify-center" style={{ height: 260 }}>
         <div
           className={`
-            rounded-full border-2 border-stone-300 flex items-center justify-center
+            rounded-full border-4 border-blue-300 flex items-center justify-center
             transition-transform duration-[4000ms] ease-in-out
             ${circleScale}
           `}
           style={{ width: 200, height: 200 }}
         >
-          <p className="text-stone-500 text-sm text-center px-6 leading-relaxed">
+          <p className="text-stone-600 text-sm text-center px-6 leading-relaxed">
             {breathMessage}
           </p>
         </div>
@@ -396,7 +396,7 @@ function MeditationPage({
 
       {/* タイマー表示 */}
       <div className="bg-stone-100 rounded-2xl px-12 py-4 mb-6">
-        <p className="text-4xl font-mono text-stone-800 text-center tabular-nums">
+        <p className="text-4xl font-mono text-stone-600 text-center tabular-nums">
           {timerDisplay}
         </p>
       </div>
@@ -406,7 +406,7 @@ function MeditationPage({
         {/* 再生/一時停止 */}
         <button
           onClick={onPlayPause}
-          className="w-14 h-14 bg-stone-800 rounded-full flex items-center justify-center text-white hover:bg-stone-600 transition-colors"
+          className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-stone-500 transition-colors"
         >
           {/* isRunning が true なら停止アイコン、false なら再生アイコン */}
           {isRunning ? (
@@ -426,7 +426,7 @@ function MeditationPage({
         {/* 停止（リセット） */}
         <button
           onClick={onStop}
-          className="w-14 h-14 bg-stone-200 rounded-full flex items-center justify-center text-stone-700 hover:bg-stone-300 transition-colors"
+          className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center text-white hover:bg-stone-500 transition-colors"
         >
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
             <rect x="6" y="6" width="12" height="12" />
@@ -443,7 +443,7 @@ function MeditationPage({
             className={`
               px-5 py-2 rounded-full text-sm font-medium transition-colors
               ${selectedMinutes === minutes
-                ? "bg-stone-800 text-white"           // 選択中
+                ? "bg-blue-500 text-white"           // 選択中
                 : "bg-stone-100 text-stone-600 hover:bg-stone-200" // 未選択
               }
             `}
@@ -553,7 +553,7 @@ function MeditationIllustration() {
         sizes="(max-width:768px)100vw, 900px"
         className="w-auto max-w-2xl h-auto mb-7"
         priority/>
-    </div> 
+    </div>
   );
 }
 
