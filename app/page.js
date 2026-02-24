@@ -73,8 +73,11 @@ export default function BreathApp() {
   // Ref（リセットされない値）の定義
   // ----------
 
-  // setInterval のIDを保存しておく（後でclearIntervalするため）
+  // setIntervalのIDを保存しておく（後でclearIntervalするため）
   // これは動きしたタイマーを、後から確実に止めるためのリモコンを保管しておく場所
+  // setIntervalは「放たれた矢」のようなもの。setIntervalを実行するとブラウザの中でタイマーが動く。
+  // このタイマーは、命令したプログラムが消えても、勝手に止まらない！
+  // 止めるにはsetIntervalのIDという命令を送る必要がある。
   const timerRef    = useRef(null);
   const breathRef   = useRef(null);
 
@@ -553,9 +556,9 @@ function MeditationIllustration() {
       <Image
         src="/Image/aaa.png"
         alt="瞑想する女性"
-        width={1200} height={800}
-        sizes="(max-width:768px)100vw, 900px"
-        className="w-auto max-w-2xl h-auto mb-7"
+        width={800} height={800}
+        sizes="(max-width:768px)100vw,800px"
+        className="w-auto max-w-2xl h-auto mb-3"
         priority/>
     </div>
   );
