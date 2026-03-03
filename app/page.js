@@ -19,7 +19,7 @@ import Image from "next/image";
 // 画面の表示する「3分」「10分」「15分」という選択肢のデータを一箇所にまとめて管理するための名簿
 //label:そのデータがなにを表すか、人間に分かりやすくするためのラベル（名札）、p:文章を入れる入れ物
 const TIME_OPTIONS = [
-  // { label: "1分",  minutes: 1  },
+  { label: "30秒",  minutes: 0.5  },
   { label: "3分",  minutes: 3  },
   { label: "10分", minutes: 10 },
   { label: "15分", minutes: 15 },
