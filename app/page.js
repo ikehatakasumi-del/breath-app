@@ -249,8 +249,8 @@ export default function BreathApp() {
   // ========================================
   return (
     // 画面全体を黒背景にして中央に白いカードを表示
-    <div className="min-h-screen bg-neutral-900 flex items-center justify-center font-sans">
-      <div className="w-full max-w-sm bg-white min-h-screen relative flex flex-col overflow-hidden">
+    <div className="min-h-screen bg-neutral-900 flex items-center justify-center font-sans sm:p-8">
+      <div className="w-full max-w-sm bg-white min-h-screen sm:min-h-0 sm:rounded-2xl sm:shadow-2xl relative flex flex-col overflow-hidden">
 
         {/* ===== メインページ ===== */}
         {page === "main" && (
@@ -556,9 +556,9 @@ function MeditationIllustration() {
       <Image
         src="/Image/aaa.png"
         alt="瞑想する女性"
-        width={800} height={800}
+        width={1200} height={800}
         sizes="(max-width:768px)100vw,800px"
-        className="w-auto max-w-2xl h-auto mb-3"
+        className="w-full h-auto mb-3"
         priority/>
     </div>
   );
@@ -571,7 +571,7 @@ function LotusFlower() {
       <Image
       src="/Image/睡蓮.png"
       alt="睡蓮の花"
-      width={1200} height={800}
+      width={1200} height={1000}
       sizes="(max-width:768px)100vw, 900px"
       className="w-auto max-w-2xl h-auto mb-7"
       priority/>
