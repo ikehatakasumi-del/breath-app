@@ -506,7 +506,7 @@ function StatsPage({ totalDays, monthlyData, onBack }) {
       <div className="flex-1 flex flex-col items-center justify-center w-full gap-8">
         {/* 継続日数 */}
         <div className="text-center">
-          <p className="text-xs text-stone-400 tracking-widest uppercase mb-2">継続日数</p>
+          <p className="text-xs text-stone-400 tracking-widest uppercase mb-2">達成日数</p>
           <p className="text-7xl font-black text-stone-800">
             {totalDays}
             <span className="text-2xl font-normal text-stone-400 ml-2">日</span>
